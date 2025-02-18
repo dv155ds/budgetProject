@@ -20,28 +20,28 @@ public class BudgetServiceTests
     public void Query_WholeMonth_ShouldReturnCorrectAmount()
     {
         // Arrange
-        var start = new DateTime(2023, 1, 1);
-        var end = new DateTime(2023, 1, 31);
+        var start = new DateTime(2025, 1, 1);
+        var end = new DateTime(2025, 1, 31);
 
         // Act
         var result = _budgetService.Query(start, end);
 
         // Assert
-        Assert.AreEqual(3100, result);
+        Assert.AreEqual(6200, result);
     }
 
     [Test]
     public void Query_CrossMonth_ShouldReturnCorrectAmount()
     {
         // Arrange
-        var start = new DateTime(2023, 1, 15);
-        var end = new DateTime(2023, 2, 15);
+        var start = new DateTime(2025, 3, 30);
+        var end = new DateTime(2025, 4, 2);
 
         // Act
         var result = _budgetService.Query(start, end);
 
         // Assert
-        var expectedAmount = (3100 / 31m) * 17 + (2800 / 28m) * 15;
+        var expectedAmount = (3100 / 31m) * 2 + (6000 / 30m) * 2;
         Assert.AreEqual(expectedAmount, result);
     }
 
@@ -51,20 +51,24 @@ public class BudgetServiceTests
         // Arrange
         var start = new DateTime(2020, 2, 1);
         var end = new DateTime(2020, 2, 29);
+        var start2 = new DateTime(2025, 2, 1);
+        var end2 = new DateTime(2025, 2, 28);
 
         // Act
         var result = _budgetService.Query(start, end);
+        var result2 = _budgetService.Query(start2, end2);
 
         // Assert
         Assert.AreEqual(2900, result);
+        Assert.AreEqual(2800, result2);
     }
 
     [Test]
     public void Query_InvalidDateRange_ShouldReturnZero()
     {
         // Arrange
-        var start = new DateTime(2023, 2, 15);
-        var end = new DateTime(2023, 1, 15);
+        var start = new DateTime(2025, 8, 15);
+        var end = new DateTime(2025, 7, 15);
 
         // Act
         var result = _budgetService.Query(start, end);
