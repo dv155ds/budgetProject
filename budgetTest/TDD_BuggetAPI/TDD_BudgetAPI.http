@@ -1,0 +1,6 @@
+@TDD_BuggetAPI_HostAddress = http://localhost:5274
+
+GET {{TDD_BuggetAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

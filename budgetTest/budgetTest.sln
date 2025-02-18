@@ -1,6 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "budgetTest", "budgetTest\budgetTest.csproj", "{50464102-068D-4247-8A6E-24305FF207CF}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "budgetTest", "budgetTest\budgetTest.csproj", "{50464102-068D-4247-8A6E-24305FF207CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD_BudgetAPI", "TDD_BuggetAPI\TDD_BudgetAPI.csproj", "{ECF479AB-5F35-474D-A48A-ADB0ECEF3C62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BudgetNUnit", "BudgetNUnit\BudgetNUnit.csproj", "{6BE58765-0E76-40AD-B92F-57530BB49EC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +19,16 @@ Global
 		{50464102-068D-4247-8A6E-24305FF207CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50464102-068D-4247-8A6E-24305FF207CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50464102-068D-4247-8A6E-24305FF207CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF479AB-5F35-474D-A48A-ADB0ECEF3C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF479AB-5F35-474D-A48A-ADB0ECEF3C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF479AB-5F35-474D-A48A-ADB0ECEF3C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF479AB-5F35-474D-A48A-ADB0ECEF3C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE58765-0E76-40AD-B92F-57530BB49EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE58765-0E76-40AD-B92F-57530BB49EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE58765-0E76-40AD-B92F-57530BB49EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE58765-0E76-40AD-B92F-57530BB49EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
