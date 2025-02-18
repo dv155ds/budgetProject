@@ -1114,19 +1114,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\max.cheng\\.nuget\\packages\\": {}
+    "C:\\Users\\toast.tsao\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\selfTraning\\budgetProject\\budgetTest\\budgetTest\\budgetTest.csproj",
+      "projectUniqueName": "C:\\Users\\toast.tsao\\RiderProjects\\budgetProject\\budgetTest\\budgetTest\\budgetTest.csproj",
       "projectName": "budgetTest",
-      "projectPath": "C:\\selfTraning\\budgetProject\\budgetTest\\budgetTest\\budgetTest.csproj",
-      "packagesPath": "C:\\Users\\max.cheng\\.nuget\\packages\\",
-      "outputPath": "C:\\selfTraning\\budgetProject\\budgetTest\\budgetTest\\obj\\",
+      "projectPath": "C:\\Users\\toast.tsao\\RiderProjects\\budgetProject\\budgetTest\\budgetTest\\budgetTest.csproj",
+      "packagesPath": "C:\\Users\\toast.tsao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\toast.tsao\\RiderProjects\\budgetProject\\budgetTest\\budgetTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\max.cheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\toast.tsao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1134,10 +1139,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://12git.owgps.net/api/v4/projects/30/packages/nuget/index.json": {},
-        "https://12git.owgps.net/api/v4/projects/52/packages/nuget/index.json": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget2023.owgps.net/nuget/oneworks/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -1154,7 +1157,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1201,7 +1205,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
