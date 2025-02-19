@@ -1,6 +1,5 @@
 using NSubstitute;
 using TDD_BudgetAPI;
-using TDD_BudgetAPI.Interface;
 using TDD_BudgetAPI.Models;
 
 namespace BudgetNUnit;

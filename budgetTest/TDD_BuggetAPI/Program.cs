@@ -1,5 +1,5 @@
 using TDD_BudgetAPI;
-using TDD_BudgetAPI.Interface;
+using TDD_BudgetAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
-builder.Services.AddScoped<IBudgetService, BudgetService>();
+builder.Services.AddScoped<BudgetService, BudgetService>();
 builder.Services.AddScoped<IBudgetRepo, MockBudgetRepo>();
 
 var app = builder.Build();

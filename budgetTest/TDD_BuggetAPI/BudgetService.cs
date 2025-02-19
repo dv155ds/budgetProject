@@ -1,13 +1,8 @@
-﻿using TDD_BudgetAPI.Interface;
+﻿using TDD_BudgetAPI.Models;
 
 namespace TDD_BudgetAPI;
 
-public interface IBudgetService
-{
-    decimal Query(DateTime start, DateTime end);
-}
-
-public class BudgetService(IBudgetRepo budgetRepo) : IBudgetService
+public class BudgetService(IBudgetRepo budgetRepo)
 {
     public decimal Query(DateTime start, DateTime end)
     {
@@ -22,28 +17,28 @@ public class BudgetService(IBudgetRepo budgetRepo) : IBudgetService
 
         foreach (var budget in budgets)
         {
-            var budgetYearMonth = DateTime.ParseExact(budget.YearMonth, "yyyyMM", null);
-            var budgetStart = new DateTime(budgetYearMonth.Year, budgetYearMonth.Month, 1);
-            var budgetEnd = budgetStart.AddMonths(1).AddDays(-1);
-
-            if (start > budgetEnd || end < budgetStart)
+            int daysInRange;
+            if (start > budget.LastDay() || end < budget.FirstDay())
             {
-                continue;
+                daysInRange=0;
             }
-
-            var effectiveStart = start > budgetStart ? start : budgetStart;
-            var effectiveEnd = end < budgetEnd ? end : budgetEnd;
-
+            else
+            {
+                var effectiveStart = start > budget.FirstDay() ? start : budget.FirstDay();
+                var effectiveEnd = end < budget.LastDay() ? end : budget.LastDay();
+                daysInRange = (effectiveEnd - effectiveStart).Days + 1;
+            }
             var daysInMonth = GetDaysInMonth(budget.YearMonth);
-            var daysInRange = (effectiveEnd - effectiveStart).Days + 1;
-
+            // :流程中對於暫存變數可抽出去，
+            // Ex: daysInRange是由很多不同的暫存變數推出來的、這樣的話就可以抽成GetDaysInRange
             totalAmount += (budget.Amount / daysInMonth) * daysInRange;
         }
 
         return totalAmount;
     }
 
-    public static int GetDaysInMonth(string yearMonth)
+    
+    private int GetDaysInMonth(string yearMonth)
     {
         if (yearMonth.Length != 6)
         {
